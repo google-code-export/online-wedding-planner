@@ -1,0 +1,20 @@
+Nama: Ernestina Rahmanasari
+NRP: 5210105001
+Tugas 5
+
+MVC
+Entity--> Plan.php
+Model --> model.php
+Control--> control.php
++Model Login--> authorisasi.php
++Control Login--> login.php, logout.php
+View
+> hero.php (backoffice)
+> hero2.php (frontoffice)
+> editform.php (editform)
++>view-login.php (loginform)
+
+DB
+wedding.sql
+
+executor--> index.php
