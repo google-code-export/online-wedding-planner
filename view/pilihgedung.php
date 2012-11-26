@@ -36,3 +36,71 @@
 			</a>
 		
 		</div>
+		
+		<div class="span8">
+		<table border="0" width="100%" cellpadding="0" cellspacing = "0">
+		<!--thumbnail pilih gedung-->
+			<td width="50%" valign="top">
+			<div class="row-fluid">
+			<ul class="thumbnails">
+			<li class="span11">
+			<div class="thumbnail">
+			<img src="http://placehold.it/360x270" alt="">
+			<h3 align="center">Pelaminan Adat Minang</h3>
+			<p align="center">Pelaminan ini ... Harga Rp. 10 juta</p>
+			<p><a class="btn btn-block btn-primary" href="./view/hero.php">Pilih</a></p>
+			</div>
+			</li>
+			</ul>
+			</div>
+			</td>
+			
+			<td width="50%" valign="top">
+			<div class="row-fluid">
+			<ul class="thumbnails">
+			<li class="span11">
+			<div class="thumbnail">
+			<img src="http://placehold.it/360x270" alt="">
+			<h3 align="center">Pelaminan Adat Minang</h3>
+			<p align="center">Pelaminan ini ... Harga Rp. 10 juta</p>
+			<p><a class="btn btn-block btn-primary" href="./view/hero.php">Pilih</a></p>
+			</div>
+			</li>
+			</ul>
+			</div>
+			</td>
+			
+			<table border="0" width="100%" cellpadding="0" cellspacing = "0">
+			<td width="50%" valign="top">
+			<div class="row-fluid">
+			<ul class="thumbnails">
+			<li class="span11">
+			<div class="thumbnail">
+			<img src="http://placehold.it/360x270" alt="">
+			<h3 align="center">Pelaminan Adat Minang</h3>
+			<p align="center">Pelaminan ini ... Harga Rp. 10 juta</p>
+			<p><a class="btn btn-block btn-primary" href="./view/hero.php">Pilih</a></p>
+			</div>
+			</li>
+			</ul>
+			</div>
+			</td>
+			
+			<td width="50%" valign="top">
+			<div class="row-fluid">
+			<ul class="thumbnails">
+			<li class="span11">
+			<div class="thumbnail">
+			<img src="http://placehold.it/360x270" alt="">
+			<h3 align="center">Pelaminan Adat Minang</h3>
+			<p align="center">Pelaminan ini ... Harga Rp. 10 juta</p>
+			<p><a class="btn btn-block btn-primary" href="./view/hero.php">Pilih</a></p>
+			</div>
+			</li>
+			</ul>
+			</div>
+			</td>
+			
+		</table>
+		</table>
+	</div>
