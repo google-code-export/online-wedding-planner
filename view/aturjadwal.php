@@ -39,7 +39,7 @@
 		
 		<div class="span8">
 		<!--form atur jadwal-->
-			<center><img src="../lib/img/testimoni_header.png"> </center><br>
+			<center><img src="../lib/img/aturjadwal.png"> </center><br>
 			<form class="form-horizontal"method="post" action="../model/atur.php">
 			<tr>
 				<input type="hidden" name="form_jadwal">
