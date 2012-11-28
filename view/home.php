@@ -32,6 +32,9 @@
 			<input type="text" class="search-query" placeholder="Search">
 			</form> </ul>
 			
+			<img src="/lib/img/a.png" class="img-circle">
+			
+			
 			<!--form class="form-horizontal">
 			<center><img src="../lib/img/login.png"></center> <br>
   			<div class="control-group">
