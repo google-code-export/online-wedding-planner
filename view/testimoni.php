@@ -25,7 +25,7 @@
 			<li> <a href="home.php">Home</a> </li>
 			<li class="active"><a href="testimoni.php">Testimoni</a></li>
 			<li><a href="#">Promo</a></li>
-			<li><a href="#">Jadwal Pernikahan</a></li>
+			<li><a href="aturjadwal.php">Jadwal Pernikahan</a></li>
 		
 			<form class="navbar-search pull-left">
 			<input type="text" class="search-query" placeholder="Search">
