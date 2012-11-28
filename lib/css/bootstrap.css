@@ -1852,7 +1852,7 @@ legend + .control-group {
 
 .form-horizontal .control-label {
   float: left;
-  width: 100px;
+  width: 160px;
   padding-top: 5px;
   text-align: left;
 }
