@@ -48,7 +48,7 @@
 			<img src="http://placehold.it/360x270" alt="">
 			<h3 align="center">Pelaminan Adat Minang</h3>
 			<p align="center">Pelaminan ini ... Harga Rp. 10 juta</p>
-			<p><a class="btn btn-block btn-primary" href="./view/hero.php">Pilih</a> <a class="btn btn-block" href="./view/hero.php">Details</a></p>
+			<p><a class="btn btn-block btn-primary" href="./view/hero.php">Pilih</a> <a class="btn btn-block" href="#">Details</a></p>
 			</div>
 			</li>
 			</ul>
@@ -63,7 +63,7 @@
 			<img src="http://placehold.it/360x270" alt="">
 			<h3 align="center">Pelaminan Adat Minang</h3>
 			<p align="center">Pelaminan ini ... Harga Rp. 10 juta</p>
-			<p><a class="btn btn-block btn-primary" href="./view/hero.php">Pilih</a></p>
+			<p><a class="btn btn-block btn-primary" href="./view/hero.php">Pilih</a> <a class="btn btn-block" href="#">Details</a></p>
 			</div>
 			</li>
 			</ul>
@@ -79,7 +79,7 @@
 			<img src="http://placehold.it/360x270" alt="">
 			<h3 align="center">Pelaminan Adat Minang</h3>
 			<p align="center">Pelaminan ini ... Harga Rp. 10 juta</p>
-			<p><a class="btn btn-block btn-primary" href="./view/hero.php">Pilih</a></p>
+			<p><a class="btn btn-block btn-primary" href="./view/hero.php">Pilih</a> <a class="btn btn-block" href="#">Details</a></p>
 			</div>
 			</li>
 			</ul>
@@ -94,7 +94,7 @@
 			<img src="http://placehold.it/360x270" alt="">
 			<h3 align="center">Pelaminan Adat Minang</h3>
 			<p align="center">Pelaminan ini ... Harga Rp. 10 juta</p>
-			<p><a class="btn btn-block btn-primary" href="./view/hero.php">Pilih</a></p>
+			<p><a class="btn btn-block btn-primary" href="./view/hero.php">Pilih</a> <a class="btn btn-block" href="#">Details</a></p>
 			</div>
 			</li>
 			</ul>
