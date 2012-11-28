@@ -48,7 +48,7 @@
 			<img src="http://placehold.it/360x270" alt="">
 			<h3 align="center">Pelaminan Adat Minang</h3>
 			<p align="center">Pelaminan ini ... Harga Rp. 10 juta</p>
-			<p><a class="btn btn-block btn-primary" href="./view/hero.php">Pilih</a></p>
+			<p><a class="btn btn-mini btn-block" href="./view/hero.php">Pilih</a></p>
 			</div>
 			</li>
 			</ul>
@@ -104,3 +104,12 @@
 		</table>
 		</table>
 	</div>
+	
+	<div style="margin: 10px 10px 0px 10px;">
+	<div id="footer"> <img src="../lib/img/footer.png">
+	<ul class="nav nav-pills">
+    <li><a href="#">Home</a> </li>
+  <li><a href="#">Profil Perencana Pernikahan</a></li>
+  <li><a href="#">Peta Kantor</a></li>
+</ul>
+<img src="../lib/img/footer.png">
