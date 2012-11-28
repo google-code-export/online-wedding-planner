@@ -31,10 +31,10 @@
 			<input type="text" class="search-query" placeholder="Search">
 			</form> </ul>
 			
-			<form class="form-horizontal">
+			<!--form class="form-horizontal">
 			<center><img src="../lib/img/login.png"></center> <br>
   			<div class="control-group">
-    		<label class="control-label" for="inputEmail" class="pull-left">Email</label>
+    		<!label class="control-label" for="inputEmail" class="pull-left">Email</label>
     		<div class="controls">
       		<input type="text" id="inputEmail" placeholder="Email">
     		</div>
@@ -53,7 +53,7 @@
       <button type="submit" class="btn">Sign in</button>
     </div>
   </div>
-</form>
+</form-->
 			
 			<a href="pilihgedung.php" class="thumbnail">
 			<img src="../lib/img/rencana.png" alt="">
