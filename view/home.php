@@ -32,7 +32,7 @@
 			<input type="text" class="search-query" placeholder="Search">
 			</form> </ul>
 			
-			<img src="../lib/img/a.png" class="img-circle">
+			<img src="../lib/img/a.png" class="img-circle" a href="home.php">
 			
 			
 			<!--form class="form-horizontal">
