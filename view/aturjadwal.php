@@ -40,7 +40,7 @@
 		<div class="span8">
 		<!--form atur jadwal-->
 			<center><img src="../lib/img/aturjadwal.png"> </center><br>
-			<center><form class="form-horizontal"method="post" action="../model/atur.php">
+			<form class="form-horizontal"method="post" action="../model/atur.php">
 			<tr>
 				<input type="hidden" name="form_jadwal">
 				<td>&nbsp;</td>
@@ -108,7 +108,7 @@
 				</td>
 				
 			</form>
-			</body> </center>
+			</body>
 		
 		</div>
 		</div>
