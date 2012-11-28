@@ -113,3 +113,51 @@
 		</div>
 		</div>
 		</div>
+		
+		<center><img src="../lib/img/adver.png"> <br> <br> </div></center>
+		<div style="margin: 15px 70px 5px 65px;">
+		<div class="container-fluid">
+		<div class="row-fluid">
+		<div class="span3">
+			<ul class="thumbnails">
+			<div class="thumbnail">
+			<img src="http://placehold.it/280x160" alt="">
+			<h3>Thumbnail label</h3>
+			<p>Thumbnail caption...</p>
+			</div> </ul>
+		</div>
+		<div class="span3">
+			<ul class="thumbnails">
+			<div class="thumbnail">
+			<img src="http://placehold.it/280x160" alt="">
+			<h3>Thumbnail label</h3>
+			<p>Thumbnail caption...</p>
+			</div> </ul>
+		</div>
+		<div class="span3">
+			<ul class="thumbnails">
+			<div class="thumbnail">
+			<img src="http://placehold.it/280x160" alt="">
+			<h3>Thumbnail label</h3>
+			<p>Thumbnail caption...</p>
+			</div> </ul>
+		</div>
+		<div class="span3">
+			<ul class="thumbnails">
+			<div class="thumbnail">
+			<img src="http://placehold.it/280x160" alt="">
+			<h3>Thumbnail label</h3>
+			<p>Thumbnail caption...</p>
+			</div> </ul>
+		</div>
+		
+		</div>
+		
+		<div style="margin: 10px 10px 0px 10px;">
+	<div id="footer"> <img src="../lib/img/footer.png">
+	<ul class="nav nav-pills">
+    <li><a href="#">Home</a> </li>
+  <li><a href="#">Profil Perencana Pernikahan</a></li>
+  <li><a href="#">Peta Kantor</a></li>
+</ul>
+<img src="../lib/img/footer.png">
