@@ -60,18 +60,25 @@
 			<img src="../lib/img/rencana.png" alt="">
 			</a>
 			
-			<div style="background-color:#fef8fb;height:600px;width:160px">
+			
+<div style="background-color:#fef8fb;height:600px;width:160px">
 <style>#ads {height:582px;left:0px;position:absolute;top:18px;width:160px}#ads ul{list-style:none}#ads ul li{clear:both;float:left;line-height:0;padding:1px 4px;overflow:hidden;}.ad{text-align:left;}.adc{height:px;table-layout:fixed;width:100%}.adt{font-size:15px;font-weight:bold;line-height:1.2}.adt:hover {color:#609548}.adb{color:#666666;font-size:12px;line-height:1.2}.adu{color:#fa79a2;font-size:10px;line-height:1.2;overflow:hidden;text-decoration:underline;text-overflow:ellipsis;white-space:nowrap}.adus{cursor:pointer}</style>
 <div id="ads">
 <ul id="ads0">
 <li id="taw0" onfocus="ss('','aw0');" onmouseover="ss('','aw0');" style="height:114px; width:152px">
-<li id="taw1" onfocus="ss('','aw1');" onmouseover="ss('','aw1');" style="height:114px; width:152px">
-<li id="taw2" onfocus="ss('','aw2');" onmouseover="ss('','aw2');" style="height:114px; width:152px">
-<li id="taw3" onfocus="ss('','aw3');" onmouseover="ss('','aw3');" style="height:114px; width:152px">
-<li id="taw4" onfocus="ss('','aw4');" onmouseover="ss('','aw4');" style="height:114px; width:152px">
-</ul>
+<div class="ad">
+<table border="0" cellpadding="0" cellspacing="0" class="adc" style="height:114px; width:152px">
+<tbody>
+<tr>
+<td valign="middle">
+<a class="adt" href="http://googleads.g.doubleclick.net/aclk?sa=L&ai=CJELtrfO_UPGHAcTbigeHgoGgAbroxdIC0tGe9jPAjbcBEAEgsYToJCgFUJK5la_8_____wFg6QLIAQGpAoIt0feYias-qAMByAPfBKoEhAFP0A0RkJgBPtYkTDRzWErSaMgOk1WUudyDJoGKqdUlIC9hm_vrg9QMikTWonMckj9t5zX4UJHu79U5-oUUJz7kz6MWPoGWd2LHllpucPPyQewY4WYsglOvjW0Q4RUgoRtqGuvxZdcosKPODu1PMa5KPobFUCrp_GUM6QtMC0d8W7X7-7U&num=1&sig=AOD64_0HALgAjUeiyM-3cAmnvKSP2lfK-g&client=ca-pub-7562224277592802&adurl=http://www.facebook.com/idowed&nx=39&ny=25&mb=1&nm=1" id="aw0" onclick="ha('aw0')" onfocus="ss('','aw0')" onmousedown="st('aw0')" onmouseover="return ss('','aw0')" target="_blank" title="www.facebook.com/idowed">
+<span>
+</a>
+<div class="adb">
+<span class="adbs" id="baw0">Unique Pre-wedding photo in Korea, Indonesia 1st Promotion in Jakarta</span>
 </div>
-</div>
+<div class="adu">
+<span class="adus" id="uaw0" onclick="ga(this,event)" onmousedown="st(this.id.substr(1))" title="www.facebook.com/idowed">www.facebook.com/idowed</span>
 		
 		</div>
 		
