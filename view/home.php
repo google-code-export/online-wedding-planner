@@ -59,6 +59,19 @@
 			<a href="pilihgedung.php" class="thumbnail">
 			<img src="../lib/img/rencana.png" alt="">
 			</a>
+			
+			<div style="background-color:#fef8fb;height:600px;width:160px">
+<style>#ads {height:582px;left:0px;position:absolute;top:18px;width:160px}#ads ul{list-style:none}#ads ul li{clear:both;float:left;line-height:0;padding:1px 4px;overflow:hidden;}.ad{text-align:left;}.adc{height:px;table-layout:fixed;width:100%}.adt{font-size:15px;font-weight:bold;line-height:1.2}.adt:hover {color:#609548}.adb{color:#666666;font-size:12px;line-height:1.2}.adu{color:#fa79a2;font-size:10px;line-height:1.2;overflow:hidden;text-decoration:underline;text-overflow:ellipsis;white-space:nowrap}.adus{cursor:pointer}</style>
+<div id="ads">
+<ul id="ads0">
+<li id="taw0" onfocus="ss('','aw0');" onmouseover="ss('','aw0');" style="height:114px; width:152px">
+<li id="taw1" onfocus="ss('','aw1');" onmouseover="ss('','aw1');" style="height:114px; width:152px">
+<li id="taw2" onfocus="ss('','aw2');" onmouseover="ss('','aw2');" style="height:114px; width:152px">
+<li id="taw3" onfocus="ss('','aw3');" onmouseover="ss('','aw3');" style="height:114px; width:152px">
+<li id="taw4" onfocus="ss('','aw4');" onmouseover="ss('','aw4');" style="height:114px; width:152px">
+</ul>
+</div>
+</div>
 		
 		</div>
 		
