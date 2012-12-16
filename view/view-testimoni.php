@@ -36,9 +36,88 @@ echo "<div class='span8'>";
 			<li><a href="#">Next</a></li>
 			</ul> </div>-->
 
-		<!--daftar testimoni-->	
-		</div></div></div>
+		<!--daftar testimoni-->
+		<?php
 
+	//include_once('header.php');
+	echo "<div class='span8'>";
+        // connect to the database
+        include('../model/koneksi.php');
+		$konek = new Koneksi();
+		$konek->con();
+		// number of results to show per page
+        $per_page = 3;
+		
+        /* get results from database
+        $result = mysql_query("SELECT * FROM testimoni") 
+                or die(mysql_error());*/
+				
+		// figure out the total pages in the database
+        $result = mysql_query("SELECT * FROM testimoni");
+        $total_results = mysql_num_rows($result);
+        $total_pages = ceil($total_results / $per_page);
+        
+		// check if the 'page' variable is set in the URL (ex: view-paginated.php?page=1)
+        if (isset($_GET['page']) && is_numeric($_GET['page']))
+        {
+                $show_page = $_GET['page'];
+                
+                // make sure the $show_page value is valid
+                if ($show_page > 0 && $show_page <= $total_pages)
+                {
+                        $start = ($show_page -1) * $per_page;
+                        $end = $start + $per_page; 
+                }
+                else
+                {
+                        // error - show first set of results
+                        $start = 0;
+                        $end = $per_page; 
+                }               
+        }
+        else
+        {
+                // if page isn't set, show first set of results
+                $start = 0;
+                $end = $per_page; 
+        }
+        
+        // display pagination
+        
+        echo "<div class='pagination pagination-centered'> ";
+        for ($i = 1; $i <= $total_pages; $i++)
+        {
+                echo "<ul><li><a href='test.php?page=$i'>$i</a></li></ul> ";
+				//echo "<a href='test.php?page=$i'>$i</a> ";
+        }
+        echo "</div>";  
+                
+        // loop through results of database query, displaying them in the table 
+        for ($i = $start; $i < $end; $i++)
+        {
+                // make sure that PHP doesn't try to show results that don't exist
+                if ($i == $total_results) { break; }
+        
+                // echo out the contents of each row into a table
+                echo "<tr>";
+				echo "<td><ul class='media-list'><body body bgcolor='#CCFF33'><li class='media'>";
+				echo "<a class='pull-left' href='#'><img class='media-object' src='../lib/img/64.png'></a>";
+				
+				echo "<div class='media-body'>";
+                //echo '<td>' . mysql_result($result, $i, 'testi_id') . '</td>';
+                echo '<h4 class="media-heading">' . mysql_result($result, $i, 'nama') . '</h4>';
+                echo '<td>' . mysql_result($result, $i, 'isi_testi') . '</td>';
+                //echo '<td><a href="edit.php?id=' . mysql_result($result, $i, 'testi_id') . '">Edit</a></td>';
+                //echo '<td><a href="delete.php?id=' . mysql_result($result, $i, 'testi_id') . '">Delete</a></td>';
+                echo "</div> </li></body></ul></td></tr>"; 
+        }
+
+        // close table>
+        //echo "</table>";
+?>
+		
+		</div></div></div>
+		
 <?php
 	//echo "</div>";
 	include_once ('footer.php');
