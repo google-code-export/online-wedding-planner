@@ -4,14 +4,24 @@ $atur= new Testimoni();
 
 	
 if (isset($_POST['form_testimoni'])){
-if ($_POST['nama']!==""&&$_POST['email']!==""&&$_POST['isi_testi']!==""){
-				$testimoni = $atur->addTesti($_POST['nama'],$_POST['email'],$_POST['isi_testi']);
+	if ($_POST['nama']!==""&&$_POST['email']!==""&&$_POST['isi_testi']!=="")
+	{
+	$testimoni = $atur->addTesti($_POST['nama'],$_POST['email'],$_POST['isi_testi']);
 				
-				header("Location:../view/view-testimoni.php");
-			}
-			else 
-			{
-				echo '<div class="alert alert-error" id="alert">Salah ! 
-			<button type="button" class="close" data-dismiss="alert" id="close">×</button></div>';
-				}
+	header("Location:../view/view-testimoni.php");
+	}
+	else 
+	{
+	$testimoni = $atur->viewTestimoni();
+	header("Location:../view/test.php");
+				/*echo '<div class="alert alert-error" id="alert">Salah ! 
+			<button type="button" class="close" data-dismiss="alert" id="close">×</button></div>';*/
+	}
 }
+else
+{
+	$testimoni = $atur->viewTestimoni();
+	header("Location:../view/test.php");
+				/*echo '<div class="alert alert-error" id="alert">Salah ! 
+			<button type="button" class="close" data-dismiss="alert" id="close">×</button></div>';*/
+	}
