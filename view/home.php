@@ -1,6 +1,6 @@
 <?php
 include_once ('header.php');
-echo "<div class='span8'>";
+echo "<div class='span9'>";
 ?>
 
 <!DOCTYPE html>
