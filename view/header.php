@@ -11,7 +11,7 @@
 	<body body bgcolor="f8f5fa">
 	<div style="margin: 10px 10px 0px 10px;">
 	<div id="header"> <img src="../lib/img/owp_header.png">
-    <!--<script src="http://code.jquery.com/jquery-latest.js"></script>-->
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
     <script src="../lib/js/bootstrap.js"></script>
 	</div>
 	</center>
