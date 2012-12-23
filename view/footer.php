@@ -84,7 +84,7 @@ $(function() {
 	<div id="footer"> <img src="../lib/img/footer.png">
 	<ul class="nav nav-pills">
     <li><a href="#">Home</a> </li>
-  <li><a href="#">Profil Perencana Pernikahan</a></li>
+  <li><a href="profil.php">Profil Perencana Pernikahan</a></li>
   <li><a href="#">Peta Kantor</a></li>
 </ul>
 <img src="../lib/img/footer.png">-->
