@@ -25,7 +25,7 @@ $(function() {
 		<center><div style="margin: 15px 70px 5px 65px;">
 		<div class="container-fluid">
 		<div class="row-fluid">
-		<div class="span3 offset1">
+		<div class="span3 offset2">
 			<ul class="thumbnails">
 			<div class="thumbnail">
 			<img src="http://placehold.it/280x160" alt="">
@@ -62,12 +62,12 @@ $(function() {
 		
 		<div class="container">
 		<div class="row">
-        <div class="span10">
+        <div class="span12">
 	<div class="navbar ">
 	<div class="navbar-inner">        
 	<ul class="nav">
 	<li><a href="home.php"><i class="icon-home"></i> Beranda</a></li>
-    <li><a href="#"><i class="icon-user"></i> Profil</a>        
+    <li><a href="profil.php"><i class="icon-user"></i> Profil</a>        
     </li>
     <li><a href="#"><i class="icon-map-marker" ></i> Peta Kantor</a></li>
 	</ul>    
