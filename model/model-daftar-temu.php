@@ -103,7 +103,7 @@ class daftarTemu{
 		
 	}
 	
-	public function delete($id){
+	public function hapus($id){
 		
 		$query="DELETE FROM planner WHERE Plan_ID='$id'";
 		
