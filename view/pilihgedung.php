@@ -20,20 +20,21 @@
     
 		<div class="container-fluid">
 		<div class="row-fluid">
-		<div class="span4">
+		<div class="span3">
+		<center><img src="../lib/img/menubar.png"></center> <br>
+		<!--sidebar menu-->
 		<ul class="nav nav-pills nav-stacked">
-			<li> <a href="home.php">Home</a> </li>
-			<li><a href="testimoni.php">Testimoni</a></li>
-			<li><a href="#">Promo</a></li>
-			<li><a href="aturjadwal.php">Jadwal Pernikahan</a></li>
+			<li><a href="home.php"><i class="icon-home"></i>  Home</a> </li>
+			<li><a href="view-testimoni.php"><i class="icon-comment"></i>  Testimoni</a></li>
+			<li><a href="#"><i class="icon-share"></i>  Promo</a></li>
+			<li><a href="aturjadwal.php"><i class="icon-calendar"></i>  Jadwal Pernikahan</a></li>
 		
 			<form class="navbar-search pull-left">
 			<input type="text" class="search-query" placeholder="Search">
-			</form> </ul>
-			
-			<a href="pilihgedung.php" class="thumbnail">
-			<img src="../lib/img/rencana.png" alt="">
-			</a>
+			<button class="btn btn-primary btn-small" type="submit"><i class="icon-search icon-white"></i></button>
+			</form> 
+			</ul>
+	
 		
 		</div>
 		
@@ -84,8 +85,8 @@
 			<ul class="thumbnails">
 			<li class="span11">
 			<div class="thumbnail">
-			<img src="http://placehold.it/360x270" alt="">
-			<h3 align="center">Gedung A</h3>
+			<img src="../lib/img/biofarma.jpg" alt="">
+			<h4 align="center">Gedung Biofarma Bandung</h4>
 			<p align="center">Gedung ini ... Harga Rp. 10 juta</p>
 			<p> <a class="btn btn-block" href="#">Details</a> <a class="btn btn-block btn-primary" href="./view/hero.php">Pilih</a></p>
 			</div>
@@ -99,8 +100,8 @@
 			<ul class="thumbnails">
 			<li class="span11">
 			<div class="thumbnail">
-			<img src="http://placehold.it/360x270" alt="">
-			<h3 align="center">Gedung B</h3>
+			<img src="../lib/img/suryalaya.jpg" alt="">
+			<h4 align="center">Gedung Suryalaya</h4>
 			<p align="center">Gedung ini ... Harga Rp. 10 juta</p>
 			<p> <a class="btn btn-block" href="#">Details</a> <a class="btn btn-block btn-primary" href="./view/hero.php">Pilih</a></p>
 			</div>
@@ -115,8 +116,8 @@
 			<ul class="thumbnails">
 			<li class="span11">
 			<div class="thumbnail">
-			<img src="http://placehold.it/360x270" alt="">
-			<h3 align="center">Gedung C</h3>
+			<img src="../lib/img/gedungpemkot.jpg" alt="">
+			<h4 align="center">Gedung Pemkot</h4>
 			<p align="center">Gedung ini ... Harga Rp. 10 juta</p>
 			<p> <a class="btn btn-block" href="#">Details</a>  <a class="btn btn-block btn-primary" href="./view/hero.php">Pilih</a></p>
 			</div>
@@ -130,8 +131,8 @@
 			<ul class="thumbnails">
 			<li class="span11">
 			<div class="thumbnail">
-			<img src="http://placehold.it/360x270" alt="">
-			<h3 align="center">Gedung D</h3>
+			<img src="../lib/img/siliwangi.jpg" alt="">
+			<h4 align="center">Gedung Siliwangi</h4>
 			<p align="center">Gedung ini ... Harga Rp. 10 juta</p>
 			<p> <a class="btn btn-block" href="#">Details</a> <a class="btn btn-block btn-primary" href="./view/hero.php">Pilih</a></p>
 			</div>
@@ -144,7 +145,11 @@
 		</table>
 	</div>
 	
-	<div style="margin: 10px 10px 0px 10px;">
+	<?php
+include_once ('footer.php');
+?>
+	
+	<!--div style="margin: 10px 10px 0px 10px;">
 	<div id="footer"> <img src="../lib/img/footer.png">
 	<ul class="nav nav-pills">
     <li><a href="#">Home</a> </li>
