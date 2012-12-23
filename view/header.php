@@ -20,7 +20,7 @@
     
 		<div class="container-fluid">
 		<div class="row-fluid">
-		<div class="span3 offset1">
+		<div class="span3">
 		<center><img src="../lib/img/menubar.png"></center> <br>
 		<!--sidebar menu-->
 		<ul class="nav nav-pills nav-stacked">
