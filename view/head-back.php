@@ -33,8 +33,8 @@
 		<center><img src="../lib/img/menubar.png"></center> <br>
 		<!--sidebar menu-->
 		<ul class="nav nav-pills nav-stacked">
-			<li class="active"><a href="home.php"><i class="icon-home"></i>  Home</a> </li>
-			<li><a href="view-testimoni.php"><i class="icon-comment"></i>  Testimoni</a></li>
+			<li class="active"><a href="daftar-temu.php"><i class="icon-home"></i>  Notifikasi</a> </li>
+			<li><a href="view-gedung.php"><i class="icon-comment"></i>  Manajemen Gedung</a></li>
 			<li><a href="#"><i class="icon-share"></i>  Promo</a></li>
 			<li><a href="aturjadwal.php"><i class="icon-calendar"></i>  Jadwal Pernikahan</a></li>
 		
