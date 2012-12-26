@@ -1,26 +1,22 @@
- <head>
-    <title>Administrator</title>
-    <!-- Bootstrap -->
-    <link href="../lib/css/bootstrap.css" rel="stylesheet" media="screen">
-  </head>
-  <body>
-    <script src="http://code.jquery.com/jquery-latest.js"></script>
-    <script src="../lib/js/bootstrap.js"></script>
-	
-	<link href="../assets/css/bootstrap.css" rel="stylesheet">
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Online Wedding Planner</title>
+
+    <!-- Le styles -->
+    <link href="../lib/css/bootstrap.css" rel="stylesheet">
     <style type="text/css">
       body {
-        padding-top: 40px;
-        padding-bottom: 40px;
-        background-color: #f5f5f5;
+        padding-top: 20px;
+        padding-bottom: 20px;
       }
-
-      .form-signin {
+	  .form-signin {
         max-width: 300px;
-        padding: 19px 29px 29px;
+        padding: 20px 29px 29px;
         margin: 0 auto 20px;
-        background-color: #fff;
-        border: 1px solid #e5e5e5;
+        background-color: #f5f5f5;
+        
         -webkit-border-radius: 5px;
            -moz-border-radius: 5px;
                 border-radius: 5px;
@@ -39,22 +35,37 @@
         margin-bottom: 15px;
         padding: 7px 9px;
       }
-
     </style>
-	
-<div style="margin:15px 10px 5px 100px">
-<div class="container">
-	<form class="form-signin">
-	<h2 class="form-signin-heading">Administrator</h2>
-	<h4 class="form-signin-heading">Please Sign In</h4>
-	<input type="text" class="input-block-level" placeholder="Email address"/>
-	<input type="password" class="input-block-level" placeholder="Password"/>
-	<label class="checkbox">
-	<input type="checkbox" value="remember-me"/>
- 	Remember me 
-	</label>
-	<button class="btn btn-large btn-primary" type="submit">Sign in</button>
-	</form>
+    <link href="../lib/css/bootstrap-responsive.css" rel="stylesheet">
 
+  </head>
+<body>
+  
+	<div class="container">
+	<div class='span7'>
+      <!-- Main hero unit for a primary marketing message or call to action -->
+      <div class="hero-unit">
+        <h1>Online Wedding Planner!</h1>
+		<p>My Wedding Planner smart assistant. Ini adalah <i>BackOffice</i></p>
+		</div>
+		<blockquote>
+		<p>Terima kasih telah berbagi kebahagiaan bersama kami.</p>
+		<small>&copy; Wedding Planner 2012</small>
+		</blockquote>
+      </div>
+	 <div class='span4'>
+		<!--Login dengan email: aa@mail.com, pass: abc-->
+		<form class="form-signin" id='login' action='model/login.php' method='post'>
+		<center><h3 class="form-signin-heading">Administrator</h3>
+		<h4 class="form-signin-heading">Please Sign In</h4></center><br>
+		<input type='hidden' name='login_form'/>
+		<input type="text" class="input-block-level" placeholder="Email address" name='Email'/>
+		<input type="password" class="input-block-level" placeholder="Password" name='Pass'/>
+		<button class="btn btn-large btn-primary" type="submit" name='submit'>Sign in</button>
+		</form>
+	</div>
+	</div>
+
+
+   </div> <!-- /container -->
 </body>
-</html>
