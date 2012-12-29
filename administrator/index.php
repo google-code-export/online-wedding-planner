@@ -1,3 +1,7 @@
+<?php
+	include_once('model/login.php');
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -53,16 +57,37 @@
 		<small>&copy; Wedding Planner 2012</small>
 		</blockquote>
       </div>
-	 <div class='span4'>
+	 <div class='span4' id='login'>
+		<?php
+		if(isset($error_login))
+			{
+				echo '<div class="alert alert-error" id="alert">
+				<button type="button" class="close" data-dismiss="alert" id="close">x</button>'
+				.$error_login.'
+				</div>';
+			}
+			if(!isset($_SESSION['login'])){
+				session_start();
+			}
+			if(isset($_SESSION['login'])){
+				echo "<div id=\"sudah_login\">
+					Selamat Datang, ".$_SESSION['name']." || <a href=\"logout.php\">Logout</a></div>";
+			}
+			else
+			{
+			?>
 		<!--Login dengan email: aa@mail.com, pass: abc-->
-		<form class="form-signin" id='login' action='model/login.php' method='post'>
-		<center><h3 class="form-signin-heading">Administrator</h3>
-		<h4 class="form-signin-heading">Please Sign In</h4></center><br>
-		<input type='hidden' name='login_form'/>
-		<input type="text" class="input-block-level" placeholder="Email address" name='Email'/>
-		<input type="password" class="input-block-level" placeholder="Password" name='Pass'/>
-		<button class="btn btn-large btn-primary" type="submit" name='submit'>Sign in</button>
+		<form class="form-signin" action='#' method='post'>
+			
+			<center><h3 class="form-signin-heading">Administrator</h3>
+			<h4 class="form-signin-heading">Please Sign In</h4></center><br>
+			<input type='hidden' name='login_form'/>
+			<input type="email" class="input-block-level" placeholder="Email address" name='Email'/>
+			<input type="password" class="input-block-level" placeholder="Password" name='Pass'/>
+			<button class="btn btn-large btn-primary" type="submit" name='login'>Sign in</button>
+		
 		</form>
+		<?php } ?>
 	</div>
 	</div>
 
