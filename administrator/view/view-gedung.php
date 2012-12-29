@@ -1,58 +1,89 @@
 <?php
-session_start();
-if (!isset($_SESSION['user'])){
+/*session_start();
+if (!isset($_SESSION['login'])){
 header("Location:../index.php");
 }
-
+*/
 include('../model/manajemen-gedung.php');
 include_once ('head-back.php');
-echo "<div class='span6 offset1'>";
-echo "<center><h3>Daftar Gedung </h3></center>";
-
-?>
-
-<body>
-<?php
-//view gedung ini untuk back-office
+echo "<div class='span7'>";
+echo "
+<center><h3>Daftar Gedung | <a href='view-tambah-gedung.php'> Tambah Gedung</a></h3></center>
+";
 
 $obj=new Gedung("localhost","root","","wedding");
 $obj->daftar();
 
-echo "<div class='row'>";
-        echo "<div <!-- class='span12'-->";       
-		    echo "<table class='table table-striped'>";
-				echo "<th>Gambar Gedung</th>
-				<th>Nama Gedung</th>
-				<th>Lokasi</th>
-				<th>Deskripsi</th>
-				<th>&nbsp;</th>
-				<th>&nbsp;</th>";
-
-//echo "<p><a href='view.php'>View All</a> | <b>View Page:</b> ";
 foreach($obj->data as $val){
 	extract($val);
-	
-	?>
-    <tr>
-    
-	<td><?php echo "<img class='img-polaroid' src=../../lib/img/$gambar_gedung width='200' height='200' >" ?></td>
-    <td><a href='view-gedung-detail.php?id=<?php echo $id_gedung?>'> <?php echo $nama_gedung; ?></a></td>
-    <td><?php echo $nama_kota; ?></td>
-    <td><?php echo $deskripsi_gedung; ?></td>
-  
-	 <td><a href="../model/ubah-gedung.php?id=<?php echo $id_gedung; ?>" class=btn" rel="tooltip" title="Ubah"><i class="icon-pencil" ></i></a></td>
-	 <td><a href="../model/hapus-gedung.php?id=<?php echo $id_gedung; ?>" class=btn" rel="tooltip" title="Hapus"><i class="icon-trash" ></i></a></td>
-
-	</tr>
-    <?php
-	//Echo "<img src=http://www.yoursite.com/images/".$info['photo'] .">
-}
-
 ?>
-</table></div></div>
-<ul class='pull-right'>
-<a class="btn btn-primary" type="button" href="../view/view-tambah-gedung.php">Tambah Gedung <i class="icon-plus-sign icon-white" ></i></a></button></ul>
-
-
-</body>
-</html>
+<!DOCTYPE html>
+<html>
+    <script src="../../lib/js/jquery-latest.js"></script>
+    <script src="../../lib/js/bootstrap.js"></script>
+	
+	<!--VIEW GEDUNG-->
+		
+		<div class="thumbnail">
+		<table border="0" width="100%" cellpadding="0" cellspacing = "0">
+		<!--thumbnail pilih gedung-->
+			<td width="1%" valign="center">
+			<td width="40%" valign="center">
+				<img src="../../lib/img/<?php echo $gambar_gedung; ?>" class="img-polaroid" width="300"></td>
+			<td width="2%" valign="center">
+			<td width="55%" valign="center">
+				<h4><?php echo $nama_gedung; ?></h4>
+				<h5>Kota: <?php echo $nama_kota; ?></h5>
+				<p><?php echo $deskripsi_gedung; ?></p>
+				<h5>Kapasitas: <?php echo $kapasitas; ?> orang</h5>
+				<input type='hidden' name='detail'>
+				<p>
+				<a href="view-gedung-detail.php?id=<?php echo $id_gedung; ?>" class="btn btn-block btn-primary">Cek Detail</a>
+				
+				<table border="0" width="100%">
+				<tr>
+				<td width="50%"><a class="btn btn-block" href="../model/hapus-gedung.php?id=<?php echo $id_gedung; ?>">Hapus</a></td>
+				<td width="50%"><a class="btn btn-block" href="view-ubah-gedung.php?edit=<?php echo $id_gedung; ?>">Ubah</a></td>
+				<!-- Button to trigger modal
+				<td width="50%"><a href="#myModal" type="submit" name='detail' role="button" class="btn btn-block" data-toggle="modal">Edit</a></td>-->
+				</tr>
+				</table>
+				<!-- Modal--> 
+				<div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+				<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+				<h3 id="myModalLabel"><?php echo $nama_gedung; ?></h3>
+				</div>
+				<div class="modal-body">
+				<table class="table">
+					<tr>
+						<th>Tanggal</th>
+						<th>Status</th>
+						<th>Harga</th>
+						<th>&nbsp; </th>
+					</tr>
+					<?php //foreach($obs->data as $value){
+							//extract($value);?>
+					<tr>
+						<td>A<?php //echo $tanggal; ?></td>
+						<td>B<?php //echo $status; ?></td>
+						<td>C<?php //echo $harga; ?></td>
+						<td class="pull-right"><a class="btn btn-primary" type="button" href="../model/#.php?id=<?php echo $id_detail; ?>" rel="tooltip" title="Pesan">Pesan <i class="icon-shopping-cart" ></i></a></td>
+					</tr>
+				</table>
+  			</div>
+  			<div class="modal-footer">
+    		<button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+ 		 	</div>
+			</div>
+			<!--End Modal-->
+			</p>
+				</td>
+				<td width="1%" valign="center"></td>
+				</table>
+				</div><br>
+	
+	<!--REPEAT CODE END HERE-->
+<?php
+}
+//}
