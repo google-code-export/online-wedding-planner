@@ -1,50 +1,53 @@
 <?php
-	include "../../model/koneksi.php";
-	class Auth {
-	
-		public function __construct(){
-			session_start();
-		}
-	
-		function login ($email, $pass){
-		
-			$konek = new Koneksi();
-			$konek->con();
-		
-			$query="select count(*) as jml from auth where email='$email' and pass='$pass'";
-			
-			$search=mysql_query($query);
-			$row=mysql_fetch_assoc($search);
-			$baris=$row['jml'];
-			
-			if ($baris==1){ 
-				return true;
-				}
-				else {
-					return false;
-				}
-		//echo $baris;
-		}
-		
-		function logout (){
-		session_destroy();
-		header("Location:../index.php");
-		}
-		
-		/*function ceksesion(){
-		session_start();
-		if (!isset($_SESSION['user'])){
-		header("Location:view-login.php");}
+include_once('../model/koneksi.php');
 
-		}*/
-		public function getUserName(){
-			if(isset($_SESSION['user'])){
-				return $_SESSION['user'];
-			}else{
-				return;
-			}
-		}
+class Auth{
 
+	//public $link;
+	
+	function __construct()
+	{
+		$konek = new Koneksi();
+		$konek->con();
+		//return $this->link;
 	}
-	//$tampil= new Auth();
-	//$tampil->login("aa@mail.com", "abc");
+	function loginUser($email,$password,$name)
+	{
+
+		//$password_md5=md5($password);
+		$query="select count(*) as jml from auth where email='$email' and pass='$password'";
+		$search=mysql_query($query);
+		$row=mysql_fetch_assoc($search);
+		$baris=$row['jml'];
+		//$hasil=$query->rowCount();
+		return $baris;
+		//print_r ($baris);
+	}
+	function getUser($email)
+	{
+		//$query="SELECT count (*) as jml FROM auth WHERE user='$name'";
+		$query2="SELECT * from auth where email='$email'";
+		//$search=mysql_query($query);
+		$search2=mysql_query($query2);
+		$hasil=mysql_fetch_assoc($search2);
+		$nama=$hasil['user'];
+		
+		/*
+		$row=mysql_fetch_assoc($search);
+		$baris=$row['jml'];
+		if($baris==1)
+		{
+			$hasil=$carinama['user'];
+			print_r ($hasil);
+			//return $hasil;
+		}
+		else
+		{
+			return $baris;
+		}*/
+		//print_r ($nama);
+		return $hasil;
+	}
+}
+//$tes= new Auth();
+//$tes->getUser('admin');
