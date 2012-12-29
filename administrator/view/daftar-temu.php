@@ -1,9 +1,10 @@
 <?php
+/*
 session_start();
 if (!isset($_SESSION['user'])){
 header("Location:../index.php");
 }
-
+*/
 include('../model/model-daftar-temu.php');
 include_once ('head-back.php');
 echo "<div class='span6 offset1'>";
