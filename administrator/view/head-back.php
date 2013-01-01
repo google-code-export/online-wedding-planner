@@ -6,6 +6,20 @@
 
     <!-- Le styles -->
     <link href="../../lib/css/bootstrap.css" rel="stylesheet">
+			<link href="lib/css/bootstrap-form.css" rel="stylesheet">
+		<script src="../../lib/js/jquery.js"> </script>
+		<script src="../../lib/js/bootstrap-tooltip.js"> </script>
+		<script src="../../lib/js/bootstrap-form.js"> </script>
+		<script src="../../lib/js/jquery.js"></script>
+		<script src="../../lib/js/bootstrap-transition.js"></script>
+		<script src="../../lib/js/bootstrap-modal.js"></script>
+		<script src="../../lib/js/pikaday.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				$('form').form();
+			});
+		</script>
+	
     <style type="text/css">
       body {
         padding-top: 20px;

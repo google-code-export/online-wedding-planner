@@ -61,7 +61,6 @@ if(isset($_REQUEST['edit'])){
 		$obj->opsi();
 		foreach ($obj->data as $kota){ ?>
   		<option name= 'id_kota' id= 'id_kota' value="<?php echo $kota['id_kota'] ?>"><?php echo $kota['nama_kota'] ?></option>
-		<?php } ?>
 		</select> </div> </div>
 		
 		<div class="control-group">

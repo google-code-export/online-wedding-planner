@@ -30,11 +30,11 @@ $obj->opsi();
 
     <div class="span9">
 	
-	<center><h3>Tambah Gedung </h3></center>
+	<center><h3><a href='view-gedung.php'>Daftar Gedung</a> | Tambah Gedung</h3></center>
 	<div class="container">
 	<div style="margin:15px 15px 15px 15px">
 		
-		<form class="form-horizontal" method="post" action="#" enctype="multipart/form-data">
+		<form class="form form-horizontal" method="post" action="#" enctype="multipart/form-data">
 		<fieldset>
   		<div class="control-group">
     	<label class="control-label" for="#">Nama Gedung</label>
