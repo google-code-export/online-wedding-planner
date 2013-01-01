@@ -11,12 +11,13 @@
 	<body body bgcolor="f8f5fa">
 	<div style="margin: 10px 10px 0px 10px;">
 	<div id="header"> <img src="../lib/img/owp_header.png">
-    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="../lib/jquery-latest.js"></script>
     <script src="../lib/js/bootstrap.js"></script>
+	
 	</div>
 	</center>
 	
-	<div style="margin: 15px 70px 5px 65px;">
+	<div style="margin: 10px 70px 5px 65px;">
     
 		<div class="container-fluid">
 		<div class="row-fluid">
@@ -36,7 +37,7 @@
 			</ul>
 			
 			
-			<a href="pilihgedung.php" class="thumbnail">
+			<a href="view-pilihgedung.php" class="thumbnail">
 			<img src="../lib/img/rencana.png" alt="">
 			</a>
 			<!--End sidebar-->
