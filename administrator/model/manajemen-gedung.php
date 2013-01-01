@@ -24,7 +24,7 @@ class Gedung{
 	//tampilkan semua gedung
 	public function daftar(){
 		
-		$query="SELECT g.id_gedung, g.nama_gedung, g.deskripsi_gedung, g.gambar_gedung, g.kapasitas, k.nama_kota
+		$query="SELECT g.id_gedung, g.nama_gedung, g.deskripsi_gedung, g.gambar_gedung, g.kapasitas, k.nama_kota, g.keterangan, g.waktu, g.alamat
 		FROM gedung g
 		JOIN kota k ON k.id_kota = g.id_kota
 		WHERE g.flag =1
@@ -96,7 +96,8 @@ class Gedung{
 			while($rows=$result->fetch_assoc()){
 								
 				$this->data[]=$rows;
-				//print_r($rows['id_gedung']);
+				//print_r($rows['tanggal']);
+				//print_r($rows['id_detail']);
 				
 			}		
 			return $this->data;
@@ -105,7 +106,7 @@ class Gedung{
 		}
 	}
 	
-	//tampilkan form tambah gedung, masukkan input ke db
+	//tampilkan form tambah & edit gedung, masukkan input ke db
 	public function tambah($nama_gedung,$id_kota,$deskripsi_gedung, $kapasitas){
 		
 		$gambar = $_FILES['image']['name'];
@@ -123,6 +124,25 @@ class Gedung{
 		}
 	}
 	
+	//tampilkan form tambah & edit gedung, masukkan input ke db
+	public function tambah_detail($id_gedung, $tanggal, $harga, $id_status){
+		
+		//$gambar = $_FILES['image']['name'];
+		
+		$query="INSERT INTO `gedung_detail`(`id_detail`,`id_gedung`, `harga`, `tanggal`, `id_status`, `flag`) 
+		VALUES('', '$id_gedung', '$harga', '$tanggal', '$id_status', '1')";
+		
+		$result= $this->mysqli->query($query) or die(mysqli_connect_errno()."Data cannot inserted");
+		
+		if($result){
+			$success_tambah="Sukses tambah data";
+			header('location:../view/view-gedung.php');
+			//$gambar = $_FILES['image']['name'];
+			//echo "$gambar";
+		}
+	}
+	
+	//tampilkan data satu gedung ke form edit gedung
 	public function ubahSatu($id_gedung){
 		
 		$query=$this->daftarSatu($id_gedung);
@@ -132,6 +152,7 @@ class Gedung{
 				
 	}
 	
+	//masukkan data yang telah diubah di form edit gedung ke db
 	public function ubah($id,$nama_gedung,$id_kota,$deskripsi,$kapasitas){
 		
 		$gambar = $_FILES['image']['name'];
@@ -149,6 +170,7 @@ class Gedung{
 		
 	}
 	
+	//ubah flag satu gedung dari 1 ke 0 agar data tidak ditampilkan
 	public function hapus($id){
 		
 		$query="UPDATE gedung SET flag=0 WHERE id_gedung='$id'";
@@ -163,6 +185,7 @@ class Gedung{
 		
 	}
 	
+	//ubah flag detail dari 1 ke 0 agar data tidak ditamplkan
 	public function hapusDetail($id){
 		
 		$query="UPDATE gedung_detail SET flag=0 WHERE id_detail='$id'";
@@ -183,6 +206,7 @@ class Gedung{
 		
 	}
 	
+	//ubah status gedung
 	public function status($id){
 		
 		$query="SELECT id_gedung, id_status, harga FROM gedung-detail WHERE id_status='$id'";
@@ -201,6 +225,8 @@ class Gedung{
 		}
 		//else {echo 'salah';}	
 	}
+	
+	//menampilkan select dropdown pilih kota pada form tambah & edit gedung
 	public function opsi(){
 		
 		$query="SELECT * FROM kota";
@@ -219,12 +245,31 @@ class Gedung{
 		//echo "</select>";
 	}
 	
+	
+	//menampilkan select dropdown pilih status gedung pada form tambah & edit detail
+	public function pilih_status(){
+		
+		$query="SELECT DISTINCT id_status, status FROM status where id_status>3";
+		$result= $this->mysqli->query($query) or die(mysqli_connect_errno()."salah");
+		//echo "<select>";
+		if($result){
+			while($rows=$result->fetch_assoc()){
+				$this->data[]=$rows;
+				//$this->data[]=$rows;
+				//echo("<option value='$rows['id_status']'>$rows['status']</option>");
+				//print_r($rows);
+				//echo "<option>".$rows['status']."</option>";
+			}
+			return $this->data;
+		}
+		//echo "</select>";
+	}
 }
 
 
 //$obj=new Gedung("localhost","root","","wedding");
 
-//$obj->ubahSatu(1);
-//echo "$obj()";
+//$obj->tanggal();
+//print_r($obj);
 
 ?>
