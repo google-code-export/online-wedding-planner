@@ -1860,7 +1860,7 @@ legend + .control-group {
 .form-horizontal .controls {
   *display: inline-block;
   *padding-left: 20px;
-  margin-left: 100px;
+  margin-left: 200px;
   *margin-left: 0;
 }
 
