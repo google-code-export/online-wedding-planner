@@ -2,7 +2,7 @@
 //include('../model/model-detail.php');
 include('../model/model-pesan.php');
 include_once ('header.php');
-echo "<div class='span8 offset1'>";
+echo "<div class='span7 offset1'>";
 
 $obj=new Pesan("localhost","root","","wedding");
 
@@ -32,7 +32,7 @@ $obj=new Pesan("localhost","root","","wedding");
 							?>
 								<tr align="center">
 								<td><?php echo $tanggal; ?></td>
-								<td><?php echo $harga; ?></td>
+								<td><?php echo "Rp. ".number_format($harga,2,',','.'); ?></td>
 								<td><?php echo $status; ?></td>
 									<?php if($id_status==6){ 
 										echo "<td> -Tidak  bisa dipilih- </td>"; 

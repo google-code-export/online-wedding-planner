@@ -1,52 +1,59 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Online Wedding Planner</title>
-    <!-- Bootstrap -->
-    <link href="../lib/css/bootstrap.css" rel="stylesheet" media="screen">
-  </head>
-  
-  <body>
-	<center>
-	<body body bgcolor="f8f5fa">
-	<div style="margin: 10px 10px 0px 10px;">
-	<div id="header"> <img src="../lib/img/owp_header.png">
-    <script src="http://code.jquery.com/jquery-latest.js"></script>
-    <script src="../lib/js/bootstrap.js"></script>
-	</div>
-	</center>
-	
-	<div style="margin: 15px 70px 5px 65px;">
-    
-		<div class="container-fluid">
-		<div class="row-fluid">
-		<div class="span4">
-		<ul class="nav nav-pills nav-stacked">
-			<li> <a href="home.php">Home</a> </li>
-			<li><a href="testimoni.php">Testimoni</a></li>
-			<li><a href="#">Promo</a></li>
-			<li class="active"><a href="aturjadwal.php">Jadwal Pernikahan</a></li>
-		
-			<form class="navbar-search pull-left">
-			<input type="text" class="search-query" placeholder="Search">
-			</form> </ul>
-			
-			<a href="pilihgedung.php" class="thumbnail">
-			<img src="../lib/img/rencana.png" alt="">
-			</a>
-		
+<?php
+include('../model/model-pesan.php');
+include_once ('header.php');
+echo "<div class='span7 offset1'>";
+
+?>
+<div class="alert alert-success" id="alert">
+		<button type="button" class="close" data-dismiss="alert" id="close">&times;</button>
+		<strong>Sukses!</strong> Data yang Anda masukkan telah kami terima. Silakan mengecek status pesanan pada <a href="#" class="text-info">Halaman Konfirmasi</a> dengan memasukkan No. Order Anda. Terima Kasih.
 		</div>
-		
-		<div class="span8">
-		<!--form atur jadwal-->
-			<center><img src="../lib/img/testimoni_header.png"> </center><br>
-			    <div class="alert alert-success">
-				<button type="button" class="close" data-dismiss="alert">×</button>
-				<h4>Sukses!</h4>
-					Data yang Anda masukkan telah kami terima. Tunggu pemberitahuan di Email Anda.
-				</div>
-			</body>
-		
-		</div>
-		</div>
-		</div>
+<?php
+if(isset($_REQUEST['order'])){
+	$display=new Pesan("localhost","root","","wedding");
+	$order=$display->orderlink($_REQUEST['order']);
+	foreach($order as $val){
+?>
+<!-- DETAIL PEMESANAN -->
+			<div class="thumbnail">
+				<table width="100%" border="0"><tr>
+					<td width="1%"></td>
+					<td width="90%"><center><h4>Detail Pemesanan </h4></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>
+					<table width="100%" border="0">
+						<tr>
+							<td width="20%"></td>
+							<td width="30%"><h3>No. Pesan </h3></td>
+							<td width="1%">:</td>
+							<td><h3> <?php echo $val['no_pesan']; ?></h3></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td>Tanggal</td>
+							<td>:</td>
+							<td> <?php echo $val['tanggal']; ?></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td>Nama</td>
+							<td>:</td>
+							<td> <?php echo $val['nama']; ?></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td>Email</td>
+							<td>:</td>
+							<td> <?php echo $val['email']; ?></td>
+						</tr>
+					</table>
+					</td>	
+				</tr>
+				</table>
+				</br>
+			</div><br>
+	<?php
+	}
+}	
