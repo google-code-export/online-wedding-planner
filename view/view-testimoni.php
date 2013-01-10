@@ -1,6 +1,6 @@
 <?php
 include_once ('header.php');
-echo "<div class='span8'>";
+echo "<div class='span8 offset1'>";
 ?>
 
 <!DOCTYPE html>
@@ -14,12 +14,11 @@ echo "<div class='span8'>";
 			  <p>
 			  <input type='hidden' name='form_testimoni'>
 			Your Name	: 
-			<input type="text" name="nama" id="inputNama" placeholder="Nama"> 
+			<input class="span4" type="text" name="nama" id="inputNama" placeholder="Nama"> 
 			Your Email	: 
-			    <input type="email" name="email" id="inputEmail" placeholder="Email"> 
+			    <input class="span4" type="email" name="email" id="inputEmail" placeholder="Email"> 
 		      </p>
-			  <ce
-			  nter>
+			  <center>
 			  <p>
 			    <textarea rows="3" class="span12" input type="text" name="isi_testi" id="inputIsi" placeholder="Isi testimoni..."></textarea>
 			  </p>
@@ -53,7 +52,7 @@ echo "<div class='span8'>";
                 or die(mysql_error());*/
 				
 		// figure out the total pages in the database
-        $result = mysql_query("SELECT * FROM testimoni");
+        $result = mysql_query("SELECT * FROM testimoni ORDER BY testi_id DESC");
         $total_results = mysql_num_rows($result);
         $total_pages = ceil($total_results / $per_page);
         
@@ -84,13 +83,17 @@ echo "<div class='span8'>";
         
         // display pagination
         
-        echo "<div class='pagination pagination-centered'> ";
+        echo "<div class='pagination pagination-center'> ";
+		echo "<b>Halaman</b>";
+		echo "<br>";
+		echo "<ul>";
         for ($i = 1; $i <= $total_pages; $i++)
         {
-                echo "<ul><li><a href='test.php?page=$i'>$i</a></li></ul> ";
+                echo "<li><a href='view-testimoni.php?page=$i'>$i</a></li> ";
 				//echo "<a href='test.php?page=$i'>$i</a> ";
         }
-        echo "</div>";  
+        echo "</ul>";
+		echo "</div>";
                 
         // loop through results of database query, displaying them in the table 
         for ($i = $start; $i < $end; $i++)
