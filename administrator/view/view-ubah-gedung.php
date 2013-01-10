@@ -60,19 +60,19 @@ if(isset($_REQUEST['edit'])){
 		<?php 
 		$obj->opsi();
 		foreach ($obj->data as $kota){ ?>
-  		<option name= 'id_kota' id= 'id_kota' value="<?php echo $kota['id_kota'] ?>"><?php echo $kota['nama_kota'] ?></option>
+  		<option name= 'id_kota' id= 'id_kota' value="<?php echo $kota['id_kota']; ?>"><?php echo $kota['nama_kota']; ?></option>
 		</select> </div> </div>
 		
 		<div class="control-group">
     	<label class="control-label" for="#">Kapasitas</label>
     	<div class="controls">
-     	<input class='span3' type="number" id="kapasitas" name="kapasitas" value="<?php echo $kapasitas?>"> </div> </div>
+     	<input class='span3' type="number" id="kapasitas" name="kapasitas" value="<?php echo $kapasitas;?>"> </div> </div>
 		
 		<div class="control-group">
     	<label class="control-label" for="#">Deskripsi</label>
     	<div class="controls">
 		<textarea class="span3" rows="3" id="deskripsi_gedung" name="deskripsi_gedung">
-     	<input type="text" value="<?php echo $deskripsi_gedung?>"> 
+     	<?php echo $deskripsi_gedung;?>
 		</textarea></div> </div>
 		
 		<div class="control-group">
@@ -101,4 +101,5 @@ if(isset($_REQUEST['edit'])){
 		<!--End form-->
 <?php 
 	}
+}
 } ?>
