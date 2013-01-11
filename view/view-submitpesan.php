@@ -24,7 +24,7 @@ $id_etnik=$_POST['id_etnik'];
 $id_paket=$_POST['id_paket'];
 $nama=$_POST['nama'];
 $email=$_POST['email'];
-date_default_timezone_set('Indonesia/Jakarta');
+//date_default_timezone_set('Indonesia/Jakarta');
 $tanggal = date('m/d/Y h:i:s a', time());
 
 $hitung=new Pesan("localhost","root","","wedding");
