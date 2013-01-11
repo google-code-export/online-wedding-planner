@@ -25,7 +25,7 @@ $id_paket=$_POST['id_paket'];
 $nama=$_POST['nama'];
 $email=$_POST['email'];
 //date_default_timezone_set('Indonesia/Jakarta');
-$tanggal = date('m/d/Y h:i:s a', time());
+$tanggal = date("Y-m-d H:i:s");
 
 $hitung=new Pesan("localhost","root","","wedding");
 $sewa=$hitung->detailpesan($id_detail);
